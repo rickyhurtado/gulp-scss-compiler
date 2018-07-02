@@ -1,0 +1,15 @@
+{
+  "name": "gulp-scss-compiler",
+  "version": "0.0-alpha",
+  "description": "Gulp automation for scss files.",
+  "repository": "git@github.com:rickyhurtado/gulp-scss-compiler.git",
+  "author": "Ricky Hurtado",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-useref": "^3.1.5"
+  }
+}
