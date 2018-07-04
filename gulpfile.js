@@ -3,7 +3,7 @@ var sass = require('gulp-sass');
 var useref = require('gulp-useref');
 var gulpIf = require('gulp-if');
 var cleanCSS = require('gulp-clean-css');
-var gulpSequence = require('gulp-sequence');
+var sequence = require('gulp-sequence');
 
 gulp.task('sass', function() {
   return gulp.src('src/css/scss/styles.scss')
@@ -28,4 +28,6 @@ gulp.task('minify-css', () => {
     .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('build', gulpSequence('sass', 'html', 'minify-css'));
+gulp.task('build', function(callback) {
+  sequence('sass', 'html', 'minify-css')(callback)
+});
